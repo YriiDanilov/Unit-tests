@@ -1,8 +1,6 @@
-import { capitalize } from '../capitalize.js';
-import assert from 'power-assert';
+import capitalize from '../capitalize.js';
 
-assert(capitalize('hello') === 'Hello');
-
-assert(capitalize('') === '');
-
-console.log('Все тесты пройдены!');
+test('capitalize', () => {
+    expect(capitalize('hello')).toEqual('Hello');
+    expect(capitalize('')).toEqual('');
+})
